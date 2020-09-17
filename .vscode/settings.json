@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/70cdd21e-102b-4559-9765-514184193c8a/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Nikothorintroduction",
+    "appService.deploySubpath": "."
+}
