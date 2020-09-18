@@ -1,5 +1,8 @@
 # Miniprojekt_Fullstack
 
+Domain navn nikothordomain.social
+
+
 Projektet kommer til at indholde 3 html filer 
 
 Index.html - Forsiden skal beskrive mig som kommende praktikant (aug-okt 2021) med navn, beskrivelse, billeder, cv, links til egne profiler på sociale medier.
