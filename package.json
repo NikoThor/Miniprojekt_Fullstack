@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/NikoThor/Miniprojekt_Fullstack/issues"
   },
-  "homepage": "https://github.com/NikoThor/Miniprojekt_Fullstack#readme"
+  "homepage": "https://github.com/NikoThor/Miniprojekt_Fullstack#readme",
+  "dependencies": {}
 }

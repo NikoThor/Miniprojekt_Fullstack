@@ -10,8 +10,9 @@ Html {
 }
 
 body{
-    
-    background-color: rgb(90, 91, 93);
+
+    font-size: 25px;
+    background-color: rgb(102, 135, 202);
 }
 
 .title {

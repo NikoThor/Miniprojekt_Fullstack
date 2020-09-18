@@ -1,22 +1,35 @@
-  
 var http = require('http');
-var url = require('url');
 var fs = require('fs');
-const port = process.env.PORT || 80;
-http.createServer(function (req, res) {
-    var q = url.parse(req.url, true);
-    console.log(q);
-    var filename = '.' + q.pathname;
-    if(q.pathname==="/"){
-        filename='./index.html'
+
+const server = http.createServer(function (request, response) {
+  if(request.url == '/') {
+      request.url = '/index.html'
     }
-    fs.readFile(filename, function (err, data) {
-        if (err) {
-            res.writeHead(404, { 'Content-Type': 'text/html' });
-            return res.end("404 Not Found")
-        }
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
-        return res.end();
-    });
-}).listen(port);
+  fs.readFile('./' + request.url, function(err, data) {
+    if (!err) {
+      console.log ('file found: ' + request.url);
+        var dotoffset = request.url.lastIndexOf('.');
+        var mimetype = dotoffset == -1
+                        ? 'text/plain'
+                        : {
+                            '.html' : 'text/html',
+                            '.ico' : 'image/x-icon',
+                            '.jpg' : 'image/jpeg',
+                            '.png' : 'image/png',
+                            '.gif' : 'image/gif',
+                            '.css' : 'text/css',
+                            '.js' : 'text/javascript'
+                            }[ request.url.substr(dotoffset) ];
+        response.setHeader('Content-type' , mimetype);
+        response.end(data);
+        console.log( request.url, mimetype );
+    } else {
+        console.log ('file not found: ' + request.url);
+        response.writeHead(404, "Not Found");
+        response.end();
+    }
+  });
+})
+
+const port = process.env.PORT || 1337;
+server.listen(port);
