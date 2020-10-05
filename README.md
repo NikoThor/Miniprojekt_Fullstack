@@ -13,3 +13,20 @@ praktikvirksomheder.html - Skal beskrive 3 spændende virksomheder, hvor jeg kun
 
 
 Projektet bliver opdateret løbende
+
+install via docker
+
+git clone projektet : https://github.com/NikoThor/Miniprojekt_Fullstack.git
+
+cd /Miniprojekt_Fullstack
+
+npm install
+
+docker build -t your username/node-web-app .
+
+Check to make sure that image has been by useing 'docker images'
+
+run the image: docker run -p 49160:8080 -d your username/fenixfel/fullstackserver
+
+to view the website go to localhost:49160
+
