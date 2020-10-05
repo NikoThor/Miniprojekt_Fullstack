@@ -14,7 +14,7 @@ praktikvirksomheder.html - Skal beskrive 3 spændende virksomheder, hvor jeg kun
 
 Projektet bliver opdateret løbende
 
-install via docker
+# install via docker
 
 git clone projektet : https://github.com/NikoThor/Miniprojekt_Fullstack.git
 
